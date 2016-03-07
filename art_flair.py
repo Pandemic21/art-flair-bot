@@ -11,7 +11,7 @@ def parse_new(r, sub):
 		submission_age_in_minutes = (rightnow - submission.created_utc)/60
 		
 		#if post age > 30 minutes, return all previous results
-		if submission_age_in_minutes > 600: #TODO: change this to 30 for 30 minutes
+		if submission_age_in_minutes > 30:
 			return results
 		
 		#if post age is < 30 minutes, add it to results[]
@@ -34,7 +34,7 @@ r = praw.Reddit("/r/naruto art flair by /u/Pandemic21")
 
 username = 'BOT_USERNAME_HERE'
 password = 'PASSWORD_HERE'
-#r.login(username, password, disable_warning=True) #TODO: uncomment this
+r.login(username, password, disable_warning=True) 
 
 title_exceptions = ["BY ", "AUTHOR", "ARTIST", "SOURCE", "OC", "CREDIT"]
 domain_exceptions = ["DEVIANTART.COM", "PIXIV.NET", "ARTSTATION.COM"]
@@ -103,7 +103,7 @@ while 1:
 					#if we should reply...
 					if not do_not_reply:
 						try: 
-							#result.add_comment(comment_text) #TODO: uncomment this
+							result.add_comment(comment_text)
 							genlog(">>>> Submitted comment")
 						except:
 							genlog(">>>> I should've added a comment, but I didn't; sorry, there was an error.")

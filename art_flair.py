@@ -44,10 +44,10 @@ logfile = ".\\art_flair.log"
 comment_text = """
 Hi, if you have you have already given credit to the artist of your fanart submission, please ignore this comment and keep up the good work!\n\n
 If **not**, please try to find the original artist using both of the following tools:\n\n
-*saucenao.com  \n
-*[Google Images](https://images.google.com/)\n\n
-Please always try to credit the original artist and link back to them either in the title and link of your post or in the comments. Thank you!
-------------------------------------
+* [saucenao.com](http://saucenao.com/)  \n
+* [Google Images](https://images.google.com/)  \n\n
+Please always try to credit the original artist and link back to them either in the title and link of your post or in the comments. Thank you!\n\n
+------------------------------------\n\n
 ^(*I am a bot, and this action was performed automatically. Please contact the moderators if you have any questions or concerns.*)
 """
 

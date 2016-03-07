@@ -66,16 +66,16 @@ while 1:
 			if not result.link_flair_text:
 				genlog("> Skipping, post not flaired: " + result.title + ", " + result.permalink)
 			else:
-				genlog("> " + result.title + ", " + result.link_flair_text + ", " + result.short_link)
-
+				genlog("> " + result.title + ", " + result.permalink)
+				genlog(">> Flair = " + result.link_flair_text.upper())
+				
 				if result.link_flair_text == "Art":
-					genlog(">> " + result.title + ", " + result.short_link)
-
+					
 					#check for title exceptions
 					for exception in title_exceptions:
 						if exception in result.title.upper():
 							do_not_reply = True
-							genlog(">>> " + exception + " found in " + result.title)
+							genlog(">>> " + exception + " found in " + result.title.upper())
 							break
 						else:
 							genlog(">>> " + exception + " not found")
@@ -85,7 +85,7 @@ while 1:
 						for exception in domain_exceptions:
 							if exception in result.domain.upper():
 								do_not_reply = True
-								genlog(">>> " + exception + " found in " + result.domain)
+								genlog(">>> " + exception + " found in " + result.domain.upper())
 								break
 							else:
 								genlog(">>> " + exception + " not found")
